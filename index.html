@@ -121,4 +121,275 @@
 
     .section-grid{
       display:grid;
-      grid-template-columns:1.15fr 
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      padding:26px;
+    }
+
+    .split-image{
+      overflow:hidden;
+      border-radius:18px;
+      min-height:320px;
+      box-shadow:var(--shadow);
+    }
+
+    .quote{
+      padding:24px;
+      border-left:6px solid var(--accent);
+      font-size:1.04rem;
+    }
+
+    .quote p:last-child{
+      margin-bottom:0;
+    }
+
+    .mini-gallery{
+      padding:14px;
+    }
+
+    .mini-gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .mini-gallery figure,
+    .bottom-grid figure{
+      margin:0;
+    }
+
+    .mini-gallery img{
+      border-radius:12px;
+      height:160px;
+    }
+
+    .mini-gallery figcaption,
+    .bottom-grid figcaption{
+      padding-top:8px;
+      font-size:.92rem;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    .bottom-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .bottom-grid img{
+      height:180px;
+      border-radius:14px;
+      box-shadow:var(--shadow);
+    }
+
+    footer{
+      padding:28px 0 60px;
+    }
+
+    .footer-box{
+      padding:22px;
+      text-align:center;
+      color:var(--muted);
+    }
+
+    @media (max-width: 900px){
+      .hero,
+      .section-grid{
+        grid-template-columns:1fr;
+      }
+
+      .bottom-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 600px){
+      header{
+        padding-top:34px;
+      }
+
+      .hero-copy,
+      .card,
+      .quote{
+        padding:20px;
+      }
+
+      .mini-gallery-grid,
+      .bottom-grid{
+        grid-template-columns:1fr;
+      }
+
+      .mini-gallery img,
+      .bottom-grid img{
+        height:220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="tag">WTC OHL & AI</span>
+        <h1>WTC OHL ontdekt nieuwe paden</h1>
+        <p class="lead">
+          Wegwijs in AI voor wie graag bijleert — warm, toegankelijk en zonder technisch jargon.
+          Niet om menselijk contact te vervangen, wel om slimmer te werken, sneller te leren en met meer plezier te experimenteren.
+        </p>
+        <p>
+          Kunstmatige intelligentie klinkt soms groot en ingewikkeld, maar in de praktijk begint het vaak klein:
+          een tekst beter formuleren, informatie sneller samenvatten, ideeën structureren of inspiratie opdoen voor een project of activiteit.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="e43ae2f7-198a-4fd2-8b71-bce93dc1b58b.jpg" alt="Sfeervol landschap als openingsbeeld" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap section-grid">
+        <div class="card">
+          <h2>AI begint bij nieuwsgierigheid</h2>
+          <p>
+            AI hoeft geen bedreigend of abstract verhaal te zijn. Voor veel mensen is het gewoon een nieuw hulpmiddel,
+            zoals ooit internet, e-mail of GPS dat waren. Je hoeft dus niet alles te begrijpen om er toch iets nuttigs mee te doen.
+          </p>
+          <p>
+            Wie nieuwsgierig blijft, ontdekt al snel dat AI vooral handig wordt wanneer je het inzet voor kleine,
+            concrete vragen: een tekst herwerken, een planning opstellen, ideeën verzamelen of een ingewikkeld onderwerp eenvoudiger laten uitleggen.
+          </p>
+          <p>
+            Net daarin zit de echte kracht: niet in spektakel, maar in dagelijkse bruikbaarheid.
+          </p>
+        </div>
+        <div class="split-image">
+          <img src="0e844929-b1ff-4ebf-97a5-e1527153e410.jpg" alt="Rustig natuurbeeld als ondersteuning bij het thema nieuwsgierigheid" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="quote">
+          <p>
+            AI is geen doel op zich. Het is een hulpmiddel dat pas waarde krijgt wanneer het mensen helpt om duidelijker te denken,
+            tijd te winnen en creatiever te werken.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap section-grid">
+        <div class="split-image">
+          <img src="63baec82-2a1e-4296-9a00-918cc4841334.jpg" alt="Breed landschap als visuele pauze tussen de tekst" />
+        </div>
+        <div class="card">
+          <h2>Wat je er vandaag al mee kunt</h2>
+          <p>
+            Zonder programmeerkennis kun je AI vandaag al gebruiken voor heel herkenbare taken. Denk aan het schrijven van een uitnodiging,
+            het samenvatten van een artikel, het verbeteren van een e-mail of het bedenken van een originele titel voor een presentatie.
+          </p>
+          <p>
+            Ook voor verenigingen en clubs kan dat interessant zijn: communicatie voorbereiden, activiteiten beschrijven,
+            sponsors aanschrijven, ideeën verzamelen voor nieuwsbrieven of een routebeschrijving helderder maken.
+          </p>
+          <p>
+            Het mooie is dat je meteen resultaat ziet. Daardoor wordt leren minder theoretisch en veel motiverender.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap mini-gallery">
+        <h2>AI als steun, niet als vervanging</h2>
+        <p>
+          Goede technologie ondersteunt mensen. Ze neemt geen betekenisvolle ontmoeting, ervaring of creativiteit weg,
+          maar helpt om sneller tot de kern te komen en meer ruimte vrij te maken voor wat echt telt.
+        </p>
+        <div class="mini-gallery-grid">
+          <figure>
+            <img src="1658df68-a9f5-49c3-a3c6-f23fceeedf7b.jpg" alt="Visueel ondersteunend beeld 1" />
+            <figcaption>Een helder hulpmiddel maakt de weg niet minder boeiend, wel beter leesbaar.</figcaption>
+          </figure>
+          <figure>
+            <img src="6a2ef5dd-8a4f-44dc-b169-46e7022f70ef.jpg" alt="Visueel ondersteunend beeld 2" />
+            <figcaption>Wie experimenteert zonder schroom, leert vaak het snelst.</figcaption>
+          </figure>
+          <figure>
+            <img src="bca192bf-7c26-44ee-a312-1cbf7cfa06e4.jpg" alt="Visueel ondersteunend beeld 3" />
+            <figcaption>Kleine toepassingen maken nieuwe technologie toegankelijk.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap section-grid">
+        <div class="card">
+          <h2>Leren mag licht en aangenaam zijn</h2>
+          <p>
+            Niet iedereen wil een cursus vol moeilijke termen. Vaak werkt een rustige, uitnodigende aanpak beter:
+            tonen wat mogelijk is, een paar voorbeelden geven en vooral de drempel laag houden.
+          </p>
+          <p>
+            Daarom combineert deze pagina tekst met beelden. De foto’s brengen ademruimte, terwijl de inhoud rond AI leesbaar,
+            menselijk en concreet blijft. Zo ontstaat geen technische handleiding, maar een uitnodiging om te verkennen.
+          </p>
+          <p>
+            Voor WTC OHL past dat perfect: samen bijleren, openstaan voor nieuwe paden en ontdekken dat innovatie ook plezierig mag zijn.
+          </p>
+        </div>
+        <div class="split-image">
+          <img src="913cf808-496a-43b6-9c86-cbb217fab4ac.jpg" alt="Sfeervolle afbeelding bij het thema samen leren en ontdekken" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Nog enkele indrukken</h2>
+        <p class="lead">
+          Een compacte selectie extra beelden, als rustige afsluiting — niet om de tekst te verdringen, maar om de pagina visueel af te ronden.
+        </p>
+
+        <div class="bottom-grid">
+          <figure>
+            <img src="5c363781-507a-43e9-9aaa-d82ea3949064.jpg" alt="Extra sfeerbeeld 1" />
+            <figcaption>Nieuwe paden vragen vooral open blik.</figcaption>
+          </figure>
+          <figure>
+            <img src="6b03d442-0bbe-4b23-baed-b28e38d7623a.jpg" alt="Extra sfeerbeeld 2" />
+            <figcaption>Technologie wordt sterker wanneer ze begrijpelijk blijft.</figcaption>
+          </figure>
+          <figure>
+            <img src="844939d1-60f5-40a0-909d-62fe22f9d675.jpg" alt="Extra sfeerbeeld 3" />
+            <figcaption>Rust en overzicht maken leren aangenamer.</figcaption>
+          </figure>
+          <figure>
+            <img src="ceedba45-f09d-4126-87ce-6c3c3389a956.jpg" alt="Extra sfeerbeeld 4" />
+            <figcaption>Een visuele noot mag, zolang de inhoud centraal blijft.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-box">
+        WTC OHL ontdekt nieuwe paden — wegwijs in AI voor wie graag bijleert.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
