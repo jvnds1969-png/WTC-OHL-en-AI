@@ -133,4 +133,381 @@
       margin-bottom: 18px;
     }
 
-    .section-head 
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--muted);
+    }
+
+    .intro-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .photo-grid figure {
+      margin: 0;
+      background: var(--card);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-grid figcaption {
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      background: rgba(255, 253, 248, 0.96);
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .story-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .story-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      padding: 30px 0 60px;
+    }
+
+    .footer-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .story,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .span-4,
+      .span-6,
+      .span-8 {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      header.hero {
+        padding-top: 38px;
+      }
+
+      .hero-copy {
+        padding: 22px;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid img {
+        min-height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">WTC OHL & AI</span>
+        <h1>WTC OHL ontdekt nieuwe paden</h1>
+        <p class="lead">
+          Een warme, toegankelijke one-pager over nieuwsgierigheid, vernieuwing en plezier in bijleren.
+          Deze pagina gebruikt nu een ruime selectie van de foto’s die al in de repository staan.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#galerij">Bekijk de galerij</a>
+          <a class="btn secondary" href="#verhaal">Lees het verhaal</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="e43ae2f7-198a-4fd2-8b71-bce93dc1b58b.jpg" alt="Sfeervolle landschapsfoto als openingsbeeld" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <div class="section-head">
+        <h2>Nieuwe blik</h2>
+        <p>
+          Wat AI interessant maakt, is niet alleen de technologie, maar vooral de manier waarop ze ons
+          helpt om anders te kijken, sneller te leren en met meer verbeelding te werken.
+        </p>
+      </div>
+
+      <div class="intro-card">
+        <p>
+          Deze pagina voelt bewust licht, open en uitnodigend aan. De beelden brengen ritme en ademruimte,
+          terwijl de tekst het thema menselijk en begrijpelijk houdt: ontdekken, proberen, leren en delen.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>24+</strong>
+            Foto’s al aanwezig in de repository
+          </div>
+          <div class="stat">
+            <strong>1</strong>
+            Overzichtelijke pagina met galerijstructuur
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            Rechtstreeks gekoppeld aan je bestaande JPG-bestanden
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerij" class="wrap">
+      <div class="section-head">
+        <h2>Fotogalerij</h2>
+        <p>
+          Een gevarieerde reeks beelden, geïntegreerd met verschillende formaten zodat de pagina meer leeft
+          dan een eenvoudige rechte fotolijst.
+        </p>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="span-8">
+          <img src="0e844929-b1ff-4ebf-97a5-e1527153e410.jpg" alt="Landschapsbeeld 1" />
+          <figcaption>Open ruimte, frisse lucht en het gevoel van een nieuwe start.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="1658df68-a9f5-49c3-a3c6-f23fceeedf7b.jpg" alt="Landschapsbeeld 2" />
+          <figcaption>Kleine indrukken maken samen een sterk verhaal.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="222baf02-1d68-4eae-a4ee-6d67eab1a37c.jpg" alt="Landschapsbeeld 3" />
+          <figcaption>Ruimte om te kijken, te leren en te vertragen.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="223d4cbe-8017-46f9-87f5-0ef730a1e1e1.jpg" alt="Landschapsbeeld 4" />
+          <figcaption>Een helder beeld werkt vaak beter dan veel uitleg.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="3f007f00-750c-41b2-b47a-27a2c79e087f.jpg" alt="Landschapsbeeld 5" />
+          <figcaption>Ontdekken begint meestal met één eenvoudige stap.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="59b98008-280a-40fb-bfbd-5f8b67f046e3.jpg" alt="Landschapsbeeld 6" />
+          <figcaption>Beelden geven de pagina meer warmte en tempo.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="5c363781-507a-43e9-9aaa-d82ea3949064.jpg" alt="Landschapsbeeld 7" />
+          <figcaption>Technologie mag ook zacht, menselijk en uitnodigend ogen.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="5f165f34-f827-4599-8d3b-22960f77ad36.jpg" alt="Landschapsbeeld 8" />
+          <figcaption>Niet alles hoeft technisch te voelen om slim te zijn.</figcaption>
+        </figure>
+
+        <figure class="span-8">
+          <img src="63baec82-2a1e-4296-9a00-918cc4841334.jpg" alt="Landschapsbeeld 9" />
+          <figcaption>Een breed beeld geeft letterlijk en figuurlijk perspectief.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="6a2ef5dd-8a4f-44dc-b169-46e7022f70ef.jpg" alt="Landschapsbeeld 10" />
+          <figcaption>Curiositeit is vaak de beste toegangspoort tot AI.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="6b03d442-0bbe-4b23-baed-b28e38d7623a.jpg" alt="Landschapsbeeld 11" />
+          <figcaption>Een galerij maakt van losse bestanden een samenhangend geheel.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="6b96e179-813c-4b4f-ba39-9354b8a3571c.jpg" alt="Landschapsbeeld 12" />
+          <figcaption>Rust in de lay-out helpt de inhoud beter landen.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="844939d1-60f5-40a0-909d-62fe22f9d675.jpg" alt="Landschapsbeeld 13" />
+          <figcaption>Ook een eenvoudige site mag verzorgd en rijk aanvoelen.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="8969ab3f-ef17-4c61-8c50-fb9ac403bf9a.jpg" alt="Landschapsbeeld 14" />
+          <figcaption>Hier ontstaat visueel ritme zonder complex te worden.</figcaption>
+        </figure>
+
+        <figure class="span-8">
+          <img src="913cf808-496a-43b6-9c86-cbb217fab4ac.jpg" alt="Landschapsbeeld 15" />
+          <figcaption>Een groot openingsbeeld trekt de bezoeker meteen binnen.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="99efd7dc-71a2-40cc-baa8-430024bc48b9.jpg" alt="Landschapsbeeld 16" />
+          <figcaption>Kleinere accenten houden het geheel licht en afwisselend.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="a4dddaaf-1b8f-41e9-999f-07e8d6cd4f12.jpg" alt="Landschapsbeeld 17" />
+          <figcaption>Beelden kunnen een abstract onderwerp tastbaar maken.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="ac64b5b5-3885-4421-a941-aa9531611b68.jpg" alt="Landschapsbeeld 18" />
+          <figcaption>Elke foto geeft net een andere sfeer aan dezelfde pagina.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="ae9be73d-62e6-4755-83a5-35e12644068d.jpg" alt="Landschapsbeeld 19" />
+          <figcaption>Zo wordt de pagina minder tekstblok en meer ervaring.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="b5b1ae30-5a0d-495c-a7ad-3e6a900286f4.jpg" alt="Landschapsbeeld 20" />
+          <figcaption>Afwisseling in formaat maakt de galerij levendiger.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="bb870cbc-7475-43fb-a105-89c7c8e890ee.jpg" alt="Landschapsbeeld 21" />
+          <figcaption>Een zachte stijl past goed bij een toegankelijke AI-pagina.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="bca192bf-7c26-44ee-a312-1cbf7cfa06e4.jpg" alt="Landschapsbeeld 22" />
+          <figcaption>Je bestaande foto’s zijn nu echt onderdeel van het ontwerp.</figcaption>
+        </figure>
+
+        <figure class="span-6">
+          <img src="c8524092-837d-470d-863b-835836644a68.jpg" alt="Landschapsbeeld 23" />
+          <figcaption>Niet meer verborgen in GitHub, maar zichtbaar op de pagina zelf.</figcaption>
+        </figure>
+
+        <figure class="span-8">
+          <img src="ceedba45-f09d-4126-87ce-6c3c3389a956.jpg" alt="Landschapsbeeld 24" />
+          <figcaption>Een afsluitend breed beeld geeft de galerij een rustig einde.</figcaption>
+        </figure>
+
+        <figure class="span-4">
+          <img src="e43ae2f7-198a-4fd2-8b71-bce93dc1b58b.jpg" alt="Landschapsbeeld 25" />
+          <figcaption>Herhaling van een sterk beeld mag, zolang het doelbewust gebeurt.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="verhaal" class="wrap">
+      <div class="section-head">
+        <h2>Waarom dit werkt</h2>
+        <p>
+          De foto’s staan in je repository op hetzelfde niveau als `index.html`, waardoor directe verwijzingen
+          met enkel de bestandsnaam correct zijn.
+        </p>
+      </div>
+
+      <div class="story">
+        <div class="story-card">
+          <h3>Technisch eenvoudig</h3>
+          <p>
+            Omdat je JPG-bestanden rechtstreeks in de hoofdmap van de repository staan, hoef je geen extra mapstructuur
+            te voorzien. Een regel zoals <code>&lt;img src="0e844929-b1ff-4ebf-97a5-e1527153e410.jpg"&gt;</code> volstaat.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <h3>Visueel veel sterker</h3>
+          <p>
+            De pagina krijgt nu een hero-afbeelding, een uitgebreide galerij en een rustiger ritme. Dat maakt de site
+            warmer, rijker en veel geloofwaardiger dan losse tekstregels met fotobeschrijvingen.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-card">
+      WTC OHL ontdekt nieuwe paden — een eenvoudige en visuele startpagina met geïntegreerde foto's.
+    </div>
+  </footer>
+</body>
+</html>
