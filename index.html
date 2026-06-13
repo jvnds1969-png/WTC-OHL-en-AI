@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTC OHL ontdekt nieuwe paden</title>
+  <meta name="description" content="Een toegankelijke en stijlvolle introductie tot AI voor nieuwsgierige leden van WTC OHL — met praktische tools, herkenbare vergelijkingen en een uitnodiging om samen te leren." />
+  <meta property="og:title" content="WTC OHL ontdekt nieuwe paden" />
+  <meta property="og:description" content="Wegwijs in AI voor wie graag bijleert — een warme, toegankelijke one-pager voor WTC OHL." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+      --text-hero: clamp(3rem, 0.5rem + 7vw, 7rem);
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --space-32: 8rem;
+
+      --color-bg: #f7f4ee;
+      --color-surface: #fbfaf7;
+      --color-surface-2: #f2eee7;
+      --color-surface-offset: #ece7de;
+      --color-surface-dynamic: #e1dbd0;
+      --color-divider: #d7d0c6;
+      --color-border: #cec7bc;
+      --color-text: #221f1a;
+      --color-text-muted: #67625b;
+      --color-text-faint: #918a80;
+      --color-text-inverse: #f8f5ef;
+      --color-primary: #0a666a;
+      --color-primary-hover: #0a5054;
+      --color-primary-active: #073d40;
+      --color-primary-highlight: #d7e7e5;
+      --color-success: #4f6d2d;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.85rem;
+      --radius-xl: 1.2rem;
+      --radius-full: 9999px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --shadow-md: 0 10px 30px oklch(0.2 0.01 80 / 0.09);
+      --shadow-lg: 0 18px 50px oklch(0.2 0.01 80 / 0.12);
+      --content-narrow: 720px;
+      --content-default: 1100px;
+      --content-wide: 1240px;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #141311;
+      --color-surface: #1b1917;
+      --color-surface-2: #24211d;
+      --color-surface-offset: #2c2824;
+      --color-surface-dynamic: #37322c;
+      --color-divider: #322f2a;
+      --color-border: #46413b;
+      --color-text: #ece6de;
+      --color-text-muted: #bbb2a6;
+      --color-text-faint: #8d857a;
+      --color-text-inverse: #171411;
+      --color-primary: #6cb5b7;
+      --color-primary-hover: #8bc9cb;
+      --color-primary-active: #4f989b;
+      --color-primary-highlight: #233435;
+      --color-success: #8bb363;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.22);
+      --shadow-md: 0 10px 30px oklch(0 0 0 / 0.32);
+      --shadow-lg: 0 18px 50px oklch(0 0 0 / 0.45);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #141311;
+        --color-surface: #1b1917;
+        --color-surface-2: #24211d;
+        --color-surface-offset: #2c2824;
+        --color-surface-dynamic: #37322c;
+        --color-divider: #322f2a;
+        --color-border: #46413b;
+        --color-text: #ece6de;
+        --color-text-muted: #bbb2a6;
+        --color-text-faint: #8d857a;
+        --color-text-inverse: #171411;
+        --color-primary: #6cb5b7;
+        --color-primary-hover: #8bc9cb;
+        --color-primary-active: #4f989b;
+        --color-primary-highlight: #233435;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--space-20);
+    }
+    body {
+      min-height: 100dvh;
+      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top left, color-mix(in oklab, var(--color-primary) 8%, transparent), transparent 32%),
+        linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+    }
+    img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+    input, button, textarea, select { font: inherit; color: inherit; }
+    button { cursor: pointer; background: none; border: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive), box-shadow var(--transition-interactive), transform var(--transition-interactive);
+    }
+    p, li { text-wrap: pretty; }
+    h1, h2, h3 { text-wrap: balance; line-height: 1.04; }
+    ::selection { background: color-mix(in oklab, var(--color-primary) 26%, transparent); }
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: var(--space-4);
+      top: -3rem;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-full);
+      z-index: 100;
+    }
+    .skip-link:focus { top: var(--space-4); }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-default));
+      margin-inline: auto;
+    }
+    .narrow { width: min(calc(100% - 2rem), var(--content-narrow)); margin-inline: auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: color-mix(in oklab, var(--color-bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      min-height: 4.5rem;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand-mark {
+      width: 2rem;
+      height: 2rem;
+      color: var(--color-primary);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .nav-links {
+      display: none;
+      gap: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .nav-links a:hover { color: var(--color-primary); }
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
+      background: color-mix(in oklab, var(--color-surface) 86%, transparent);
+    }
+    .theme-toggle:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+    .hero {
+      padding: clamp(var(--space-12), 6vw, var(--space-20)) 0 var(--space-12);
+    }
+    .hero-grid {
+      display: grid;
+      gap: var(--space-8);
+      align-items: stretch;
+    }
+    .hero-copy {
+      display: grid;
+      align-content: end;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary-active);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-5);
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 8vw, 6.8rem);
+      margin-bottom: var(--space-5);
+      max-width: 11ch;
+    }
+    .hero p {
+      max-width: 62ch;
+      color: var(--color-text-muted);
+      font-size: var(--text-lg);
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 28rem;
+      border-radius: calc(var(--radius-xl) + 0.2rem);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: var(--color-surface-2);
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: auto var(--space-5) var(--space-5) var(--space-5);
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      background: color-mix(in oklab, var(--color-surface) 72%, transparent);
+      backdrop-filter: blur(10px);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-overlay p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      max-width: 46ch;
+    }
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+    .stat {
+      padding-top: var(--space-4);
+      border-top: 1px solid color-mix(in oklab, var(--color-text) 12%, transparent);
+    }
+    .stat strong {
+      display: block;
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-1);
+    }
+    .stat span {
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    main section {
+      padding: clamp(var(--space-10), 6vw, var(--space-20)) 0;
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 1200px;
+    }
+
+    .section-header {
+      display: grid;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      max-width: 12ch;
+    }
+    .section-header p {
+      max-width: 60ch;
+      color: var(--color-text-muted);
+    }
+
+    .quote-panel,
+    .callout,
+    .tool-card,
+    .choice-panel,
+    .challenge-card,
+    .photo-card,
+    .photo-feature {
+      background: color-mix(in oklab, var(--color-surface) 94%, transparent);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .intro-layout {
+      display: grid;
+      gap: var(--space-6);
+    }
+    .essay {
+      display: grid;
+      gap: var(--space-5);
+    }
+    .essay p {
+      max-width: 68ch;
+    }
+    .lead-in {
+      font-size: var(--text-lg);
+      color: var(--color-text);
+    }
+    .quote-panel {
+      padding: var(--space-8);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-primary-highlight) 54%, var(--color-surface)), var(--color-surface));
+    }
+    .quote-panel p {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      max-width: 12ch;
+    }
+    .quote-panel small {
+      display: block;
+      margin-top: var(--space-6);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: var(--text-xs);
+    }
+
+    .callout {
+      padding: var(--space-8);
+      display: grid;
+      gap: var(--space-4);
+    }
+    .callout h3,
+    .tools-title,
+    .challenge-card h3,
+    .choice-panel h3,
+    .photo-card h3,
+    .photo-feature h3 {
+      font-size: var(--text-lg);
+      line-height: 1.2;
+    }
+    .callout ul,
+    .challenge-card ol {
+      list-style: none;
+      display: grid;
+      gap: var(--space-3);
+    }
+    .callout li,
+    .challenge-card li {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      color: var(--color-text-muted);
+    }
+    .dot,
+    .step {
+      flex: 0 0 auto;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-primary-highlight);
+      color: var(--color-primary-active);
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 0.08rem;
+    }
+
+    .photo-story {
+      display: grid;
+      gap: var(--space-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    }
+    .photo-card {
+      overflow: hidden;
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-surface) 90%, white 10%), var(--color-surface));
+    }
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .photo-card .photo-copy {
+      padding: var(--space-5);
+      display: grid;
+      gap: var(--space-3);
+    }
+    .photo-card p,
+    .photo-feature p {
+      color: var(--color-text-muted);
+    }
+    .photo-feature {
+      display: grid;
+      gap: var(--space-5);
+      overflow: hidden;
+      background: linear-gradient(160deg, color-mix(in oklab, var(--color-surface) 88%, white 12%), var(--color-surface-2));
+    }
+    .photo-feature img {
+      width: 100%;
+      height: 100%;
+      min-height: 18rem;
+      object-fit: cover;
+    }
+    .photo-feature .photo-copy {
+      padding: var(--space-6);
+      display: grid;
+      gap: var(--space-3);
+      align-content: center;
+    }
+
+    .tools-grid {
+      display: grid;
+      gap: var(--space-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    }
+    .tool-card {
+      padding: var(--space-6);
+      display: grid;
+      gap: var(--space-4);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-surface) 90%, white 10%), var(--color-surface));
+    }
+    .tool-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+    }
+    .tool-name {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 700;
+      font-size: var(--text-base);
+    }
+    .tool-badge {
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      background: var(--color-surface-offset);
+      color: var(--color-text-muted);
+    }
+    .icon-wrap {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: color-mix(in oklab, var(--color-primary) 11%, var(--color-surface));
+      color: var(--color-primary);
+    }
+    .tool-card p,
+    .tool-card li,
+    .choice-panel p,
+    .challenge-card p {
+      color: var(--color-text-muted);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .meta span {
+      padding: 0.3rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: color-mix(in oklab, var(--color-surface-offset) 82%, transparent);
+      font-size: var(--text-xs);
+    }
+    .tool-card ul {
+      list-style: none;
+      display: grid;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+    }
+    .tool-card li::before {
+      content: "— ";
+      color: var(--color-primary);
+    }
+
+    .comparison {
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      box-shadow: var(--shadow-sm);
+      background: var(--color-surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    th, td {
+      text-align: left;
+      padding: var(--space-4);
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      vertical-align: top;
+    }
+    th {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      background: color-mix(in oklab, var(--color-surface-2) 88%, transparent);
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .choice-grid {
+      display: grid;
+      gap: var(--space-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      align-items: start;
+    }
+    .choice-panel {
+      padding: var(--space-6);
+      display: grid;
+      gap: var(--space-4);
+    }
+    .priority-list {
+      list-style: none;
+      display: grid;
+      gap: var(--space-3);
+    }
+    .priority-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent);
+    }
+    .priority-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary-active);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .challenge-card {
+      padding: clamp(var(--space-8), 5vw, var(--space-12));
+      display: grid;
+      gap: var(--space-5);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(140deg, color-mix(in oklab, var(--color-primary-highlight) 55%, var(--color-surface)), var(--color-surface));
+    }
+    .challenge-card::after {
+      content: "";
+      position: absolute;
+      width: 16rem;
+      aspect-ratio: 1;
+      right: -4rem;
+      bottom: -5rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in oklab, var(--color-primary) 20%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+    .challenge-grid {
+      display: grid;
+      gap: var(--space-6);
+    }
+    .challenge-note {
+      font-size: var(--text-lg);
+      max-width: 46ch;
+    }
+
+    .footer {
+      padding: var(--space-8) 0 var(--space-12);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      padding-top: var(--space-6);
+      border-top: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 800px) {
+      .nav-links { display: inline-flex; }
+      .hero-grid,
+      .intro-layout,
+      .challenge-grid { grid-template-columns: 1fr 1fr; }
+      .photo-feature { grid-template-columns: 1.1fr 0.9fr; }
+      .section-header { grid-template-columns: 1fr 1fr; align-items: end; }
+    }
+
+    @media (max-width: 799px) {
+      .header-inner { min-height: 4rem; }
+      .hero-overlay,
+      .quote-panel,
+      .callout,
+      .tool-card,
+      .choice-panel,
+      .challenge-card,
+      .photo-card .photo-copy,
+      .photo-feature .photo-copy { padding: var(--space-5); }
+      .stat-row { grid-template-columns: 1fr; }
+      th, td { padding: var(--space-3); }
+      .comparison { overflow-x: auto; }
+      .hero h1 { max-width: 9ch; }
+      .hero-media { min-height: 24rem; }
+      .hero-overlay { inset: auto var(--space-4) var(--space-4) var(--space-4); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Ga naar de inhoud</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="WTC OHL ontdekt nieuwe paden">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 41.5C18.5 31 26.5 23.5 38 18.5C42.8 16.4 47.3 15.4 52 15" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M12 41.5C17 46 23.2 48.8 30.5 50C39.7 51.4 47.6 49.2 54 43" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="16" cy="43" r="6" stroke="currentColor" stroke-width="4"/>
+          <circle cx="50" cy="22" r="6" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <span>WTC OHL · AI</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primaire navigatie">
+          <a href="#waarom">Waarom</a>
+          <a href="#beelden">Sfeer</a>
+          <a href="#tools">Tools</a>
+          <a href="#kiezen">Kiezen</a>
+          <a href="#uitdaging">Uitdaging</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Wissel van thema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Wegwijs in AI voor wie graag bijleert</div>
+          <h1>WTC OHL ontdekt nieuwe paden.</h1>
+          <p>Een warme introductie tot artificiële intelligentie voor nieuwsgierige fietsmaten die houden van stevige beklimmingen, goede gesprekken en nieuwe ideeën. Geen technische handleiding, wel een helder vertrekpunt om samen te leren.</p>
+        </div>
+        <figure class="hero-media reveal">
+          <img src="8C60A764-F67D-4FEE-AEEE-C79EE83D656F.jpeg" alt="Panoramisch zicht op een bergmeer met groene heuvels en hoge bergen onder een blauwe hemel" width="1056" height="792" loading="eager" decoding="async" />
+          <figcaption class="hero-overlay">
+            <p>AI werkt het best zoals een goede rit: met overzicht, het juiste tempo en de juiste ploegmaat op het juiste moment.</p>
+            <div class="stat-row" aria-label="Drie kernideeën">
+              <div class="stat">
+                <strong>6 tools</strong>
+                <span>elk met een eigen rol</span>
+              </div>
+              <div class="stat">
+                <strong>1 principe</strong>
+                <span>het juiste gereedschap kiezen</span>
+              </div>
+              <div class="stat">
+                <strong>Samen leren</strong>
+                <span>zoals op de fiets</span>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="waarom">
+      <div class="container intro-layout">
+        <div class="essay reveal">
+          <div class="section-header">
+            <h2>Waarom AI ons bezighoudt</h2>
+            <p>Wie dagelijks informatie verwerkt, keuzes maakt, verslagen schrijft, cijfers analyseert of mensen begeleidt, merkt snel dat AI tijd kan vrijmaken voor wat echt telt.</p>
+          </div>
+          <p>De meesten van ons nemen voortdurend beslissingen in werk en privé. AI helpt daarbij niet door voor ons te denken, maar door sneller informatie te vinden, ideeën te ordenen, documenten samen te vatten en nieuwe invalshoeken aan te reiken.</p>
+          <p>De grootste misvatting is dat AI één ding zou zijn. Net zoals je voor een graveltocht een andere fiets kiest dan voor een Alpenrit, bestaan er verschillende tools met elk hun eigen sterke punten.</p>
+          <p>De kunst zit dus niet in blind op één naam vertrouwen, maar in leren wanneer je welke assistent inzet. Dat maakt AI tegelijk boeiend en bijzonder bruikbaar.</p>
+        </div>
+        <aside class="quote-panel reveal">
+          <p>“Niet één AI, maar een hele ploeg.”</p>
+          <small>Zoals een koersfiets, mountainbike en tijdritfiets elk hun terrein hebben.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section id="beelden">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Nieuwe paden, nieuwe perspectieven</h2>
+          <p>De gekozen beelden versterken de metafoor van verkennen, oriënteren en samen onderweg zijn. Ze geven de pagina meer ritme zonder het rustige, redactionele karakter te verliezen.</p>
+        </div>
+        <div class="photo-story">
+          <article class="photo-card reveal">
+            <img src="IMG_9009.jpeg" alt="Meerzicht met kleine boten, bergen in de verte en bewolkte lucht" width="1056" height="792" loading="lazy" decoding="async" />
+            <div class="photo-copy">
+              <h3>Oriëntatie</h3>
+              <p>Zoals je op het water en in de bergen je lijn kiest, zo helpt AI om sneller richting te vinden in informatie, vragen en keuzes.</p>
+            </div>
+          </article>
+          <article class="photo-card reveal">
+            <img src="IMG_9005.jpeg" alt="Turquoise bergmeer omringd door groene valleien en wolken" width="1056" height="792" loading="lazy" decoding="async" />
+            <div class="photo-copy">
+              <h3>Overzicht</h3>
+              <p>Goede hulpmiddelen geven geen lawaai maar overzicht: ze maken complexe materie leesbaar en laten je scherper beslissen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="callout reveal">
+          <h3>Wat deze pagina wél en niet is</h3>
+          <ul>
+            <li><span class="dot">1</span><span>Wel: een laagdrempelige introductie, geschreven voor nieuwsgierige gebruikers en niet voor IT-specialisten.</span></li>
+            <li><span class="dot">2</span><span>Niet: een volledig overzicht of technische handleiding. Dit is een praktische opstap, geen eindpunt.</span></li>
+            <li><span class="dot">3</span><span>Wel: een uitnodiging om te experimenteren, ervaringen uit te wisselen en samen slimmer te worden.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Niet één AI, maar een hele ploeg</h2>
+          <p>Veel namen worden op één hoop gegooid, maar elk model voelt anders aan en blinkt uit in andere taken. Hieronder staan de belangrijkste spelers in gewone mensentaal.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 4v10l-7 4-7-4V7l7-4z"/><path d="M8 9.5l4 2.5 4-2.5"/><path d="M12 12v5"/></svg>
+                </span>
+                ChatGPT
+              </div>
+              <span class="tool-badge">Allrounder</span>
+            </div>
+            <p>De veelzijdige ploegmaat voor brainstormen, schrijven, samenvatten, uitleggen en ideeën testen.</p>
+            <div class="meta"><span>chatgpt.com</span><span>Gratis + Plus</span></div>
+            <ul>
+              <li>Ideaal voor teksten, reisplanning en voorbereiding van meetings.</li>
+              <li>Handig wanneer je snel een eerste versie of frisse invalshoek nodig hebt.</li>
+            </ul>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
+                </span>
+                Perplexity
+              </div>
+              <span class="tool-badge">Onderzoeker</span>
+            </div>
+            <p>Meer researchassistent dan chatbot: zoekt info op, vat samen en toont meteen de bronnen.</p>
+            <div class="meta"><span>perplexity.ai</span><span>Gratis + Pro</span></div>
+            <ul>
+              <li>Sterk voor actuele info, feitencheck en voorbereidend opzoekwerk.</li>
+              <li>Zeer bruikbaar voor reizen, investeringen en bestuursvoorbereiding.</li>
+            </ul>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v4h4"/><path d="M9 12h6M9 16h5"/></svg>
+                </span>
+                Claude
+              </div>
+              <span class="tool-badge">Denker</span>
+            </div>
+            <p>Rustige, genuanceerde stijl en sterk in lange teksten, complexe documenten en doordachte herwerking.</p>
+            <div class="meta"><span>claude.ai</span><span>Gratis + Pro</span></div>
+            <ul>
+              <li>Past goed bij rapportanalyse, beleidsdocumenten en strategische nota’s.</li>
+              <li>Fijn wanneer nuance en diepgang belangrijker zijn dan snelheid.</li>
+            </ul>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                </span>
+                Copilot
+              </div>
+              <span class="tool-badge">Microsoft</span>
+            </div>
+            <p>Voor wie vooral in Word, Excel, Outlook en Teams leeft, zit de meerwaarde in de integratie met Microsoft 365.</p>
+            <div class="meta"><span>copilot.microsoft.com</span><span>Gratis basis + Microsoft 365</span></div>
+            <ul>
+              <li>Nuttig voor verslagen, Excel-analyses, presentaties en e-mails.</li>
+              <li>Logische keuze als je werkdag al rond Microsoft draait.</li>
+            </ul>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M8 12h8"/></svg>
+                </span>
+                Gemini
+              </div>
+              <span class="tool-badge">Google</span>
+            </div>
+            <p>Google’s antwoord, vooral interessant voor wie vooral in Gmail, Drive en Docs werkt.</p>
+            <div class="meta"><span>gemini.google.com</span><span>Gratis + AI Pro</span></div>
+            <ul>
+              <li>Voelt natuurlijk aan binnen de Google-werkomgeving.</li>
+              <li>Geschikt voor dagelijkse productiviteit en documentwerk.</li>
+            </ul>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H20v15.5A1.5 1.5 0 0 0 18.5 18H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                </span>
+                NotebookLM
+              </div>
+              <span class="tool-badge">Kennisbibliothecaris</span>
+            </div>
+            <p>Je laadt je eigen documenten op en stelt daar vragen over. Het systeem zoekt enkel in jouw eigen bronnen.</p>
+            <div class="meta"><span>notebooklm.google.com</span><span>Gratis + extra via AI Pro</span></div>
+            <ul>
+              <li>Bijzonder sterk voor richtlijnen, verslagen, beleidsnota’s en cursusmateriaal.</li>
+              <li>Ook indrukwekkend: automatisch een podcastgesprek laten genereren op basis van je documenten.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="situaties-title">
+      <div class="container">
+        <div class="photo-feature reveal">
+          <img src="IMG_3641.jpeg" alt="Zicht op de skyline van Bern vanaf een brug met dramatische wolkenlucht" width="768" height="1024" loading="lazy" decoding="async" />
+          <div class="photo-copy">
+            <div class="eyebrow">Van stad naar strategie</div>
+            <h3 id="situaties-title">Welke tool kies je wanneer?</h3>
+            <p>Je hoeft niet alles te onthouden. Zie dit als een eenvoudige wegwijzer voor de meest voorkomende situaties.</p>
+            <p>Net als bij routekeuze helpt een goed overzicht om sneller de juiste afslag te nemen.</p>
+          </div>
+        </div>
+        <div class="comparison reveal" style="margin-top: var(--space-6);">
+          <table>
+            <thead>
+              <tr>
+                <th>Situatie</th>
+                <th>Beste keuze</th>
+                <th>Waarom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Snel betrouwbare info zoeken</td>
+                <td><span class="pill">Perplexity</span></td>
+                <td>Bronnen staan meteen zichtbaar en maken feitencheck eenvoudiger.</td>
+              </tr>
+              <tr>
+                <td>Brainstormen of schrijven</td>
+                <td><span class="pill">ChatGPT</span></td>
+                <td>Snel ideeën genereren, formuleringen verfijnen en eerste versies maken.</td>
+              </tr>
+              <tr>
+                <td>Vooral Microsoft-gebruiker</td>
+                <td><span class="pill">Copilot</span></td>
+                <td>Naadloze aansluiting op Word, Excel, Outlook, Teams en presentaties.</td>
+              </tr>
+              <tr>
+                <td>Vooral Google-gebruiker</td>
+                <td><span class="pill">Gemini</span></td>
+                <td>Voelt als een natuurlijke uitbreiding van Gmail, Docs en Drive.</td>
+              </tr>
+              <tr>
+                <td>Werken met eigen documenten</td>
+                <td><span class="pill">NotebookLM</span></td>
+                <td>Analyseert enkel je eigen materiaal en blijft daardoor heel gericht.</td>
+              </tr>
+              <tr>
+                <td>Complexe teksten analyseren</td>
+                <td><span class="pill">Claude</span></td>
+                <td>Rustig, genuanceerd en sterk bij langere documenten en reflectie.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="kiezen">
+      <div class="container choice-grid">
+        <div class="choice-panel reveal">
+          <h3>Mijn persoonlijke tip</h3>
+          <p>Als je vandaag opnieuw zou beginnen, dan volstaan twee tools voor het grootste deel van wat je professioneel en persoonlijk nodig hebt.</p>
+          <ul class="priority-list" aria-label="Aanbevolen startvolgorde">
+            <li><span>ChatGPT — denken, schrijven en brainstormen</span><span class="pill">1</span></li>
+            <li><span>Perplexity — opzoekwerk, actualiteit en bronnen</span><span class="pill">2</span></li>
+            <li><span>NotebookLM — extra sterk voor documentwerk</span><span class="pill">3</span></li>
+          </ul>
+        </div>
+
+        <div class="choice-panel reveal">
+          <h3>De fietsenstalmetafoor</h3>
+          <p>Binnen WTC OHL weet iedereen dat één fiets niet alles kan. Voor een Alpenrit kies je iets anders dan voor gravel in Toscane of een kasseiklassieker.</p>
+          <p>Met AI werkt het net zo: soms gebruik je Perplexity om informatie te verzamelen, daarna ChatGPT om ze te verwerken, en vervolgens Copilot om er een presentatie van te maken.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="photo-story">
+          <article class="photo-card reveal">
+            <img src="IMG_3643.jpeg" alt="Uitzicht over de rivier in Bern met historische gebouwen en groene oevers" width="1056" height="792" loading="lazy" decoding="async" />
+            <div class="photo-copy">
+              <h3>Context zien</h3>
+              <p>Goede AI-antwoorden hangen af van context. Hoe beter de vraag, hoe helderder het landschap dat je terugkrijgt.</p>
+            </div>
+          </article>
+          <article class="photo-card reveal">
+            <img src="61628829-8459-4580-9c69-1448555f9bc3.jpeg" alt="Twee wielrenners op een bergweg tussen groene hellingen" width="1056" height="792" loading="lazy" decoding="async" />
+            <div class="photo-copy">
+              <h3>Samen vooruit</h3>
+              <p>AI leer je het snelst zoals fietsen in groep: proberen, vergelijken, bijsturen en onderweg ervaringen delen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container narrow reveal">
+        <div class="callout">
+          <h3>Waarom dit de moeite waard is</h3>
+          <p>AI vervangt geen expertise, geen ervaring en geen gezond verstand. Wat ze wel kan doen, is tijd vrijmaken voor denken, beslissen, creëren en met elkaar praten — precies de dingen die het verschil maken in werk, bestuur en vriendschap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="uitdaging">
+      <div class="container">
+        <div class="challenge-card reveal">
+          <div class="challenge-grid">
+            <div>
+              <div class="eyebrow">OHL AI-uitdaging</div>
+              <h2 class="tools-title">Voor de volgende rit</h2>
+              <p class="challenge-note">Net als fietsen leer je AI niet door er alleen over te lezen. Je leert het door op te stappen en iets uit te proberen.</p>
+            </div>
+            <div>
+              <ol>
+                <li><span class="step">1</span><span>Maak een gratis account aan op Perplexity.</span></li>
+                <li><span class="step">2</span><span>Stel een vraag die je professioneel of persoonlijk bezighoudt.</span></li>
+                <li><span class="step">3</span><span>Noteer één verrassend inzicht.</span></li>
+                <li><span class="step">4</span><span>Vertel erover tijdens de koffiestop.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Niet alleen samen fietsen, maar ook samen leren.</p>
+      <p>Ontworpen als een warme, leesbare one-pager die je meteen kunt delen met WTC OHL.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      function renderIcon(mode) {
+        toggle.innerHTML = mode === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label', mode === 'dark' ? 'Schakel naar lichte modus' : 'Schakel naar donkere modus');
+      }
+
+      root.setAttribute('data-theme', theme);
+      renderIcon(theme);
+
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon(theme);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.16 });
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
