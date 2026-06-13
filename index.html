@@ -733,4 +733,540 @@
     }
 
     @media (min-width: 800px) {
-      .nav-links { 
+      .nav-links { display: inline-flex; }
+      .hero-grid,
+      .intro-layout,
+      .challenge-grid,
+      .split-band { grid-template-columns: 1.15fr 0.85fr; }
+      .section-header { grid-template-columns: 1fr 1fr; align-items: end; }
+    }
+
+    @media (max-width: 799px) {
+      .header-inner { min-height: 4rem; }
+      .hero-card,
+      .quote-panel,
+      .callout,
+      .tool-card,
+      .choice-panel,
+      .challenge-card,
+      .deep-dive summary,
+      .deep-dive-body { padding-left: var(--space-5); padding-right: var(--space-5); }
+      .hero-card,
+      .quote-panel,
+      .callout,
+      .tool-card,
+      .choice-panel,
+      .challenge-card,
+      .photo-rail,
+      .deep-dive { padding-top: var(--space-5); padding-bottom: var(--space-5); }
+      .stat-row { grid-template-columns: 1fr; }
+      th, td { padding: var(--space-3); }
+      .comparison { overflow-x: auto; }
+      .hero h1 { max-width: 9ch; }
+      .closing-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-photo { min-height: 320px; }
+    }
+
+    @media (max-width: 560px) {
+      .quick-links { flex-direction: column; align-items: stretch; }
+      .closing-gallery { grid-template-columns: 1fr; }
+      .photo-rail img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Ga naar de inhoud</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="WTC OHL ontdekt nieuwe paden">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 41.5C18.5 31 26.5 23.5 38 18.5C42.8 16.4 47.3 15.4 52 15" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M12 41.5C17 46 23.2 48.8 30.5 50C39.7 51.4 47.6 49.2 54 43" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="16" cy="43" r="6" stroke="currentColor" stroke-width="4"/>
+          <circle cx="50" cy="22" r="6" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <span>WTC OHL · AI</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primaire navigatie">
+          <a href="#waarom">Waarom</a>
+          <a href="#tools">Tools</a>
+          <a href="#kiezen">Kiezen</a>
+          <a href="#uitdaging">Uitdaging</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Wissel van thema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-stack reveal">
+          <div>
+            <div class="eyebrow">Wegwijs in AI voor wie graag bijleert</div>
+            <h1>WTC OHL ontdekt nieuwe paden.</h1>
+            <p>Een warme introductie tot artificiële intelligentie voor nieuwsgierige fietsmaten die houden van stevige beklimmingen, goede gesprekken en nieuwe ideeën. Geen technische handleiding, wel een helder vertrekpunt om samen te leren.</p>
+          </div>
+
+          <aside class="hero-card" aria-label="Samenvatting van de insteek">
+            <p class="lead-in">AI is geen vervanging voor expertise of gezond verstand. Zie het eerder als een slimme fietscomputer: hij rijdt de rit niet voor jou, maar helpt je wel beter navigeren, sneller beslissen en scherper denken.</p>
+            <div class="stat-row" aria-label="Drie kernideeën">
+              <div class="stat">
+                <strong>6 tools</strong>
+                <span>elk met een eigen rol</span>
+              </div>
+              <div class="stat">
+                <strong>1 principe</strong>
+                <span>het juiste gereedschap kiezen</span>
+              </div>
+              <div class="stat">
+                <strong>Samen leren</strong>
+                <span>zoals op de fiets</span>
+              </div>
+            </div>
+
+            <div class="quick-map">
+              <p><strong>Leeswijzer:</strong> je kunt deze pagina lineair lezen, maar ook meteen doorspringen naar het stuk dat je vandaag het meest interesseert.</p>
+              <div class="quick-links">
+                <a href="#waarom">Waarom AI ons bezighoudt</a>
+                <a href="#tools">De AI-ploeg</a>
+                <a href="#situaties-title">Welke tool wanneer?</a>
+                <a href="#kiezen">Mijn persoonlijke tip</a>
+                <a href="#uitdaging">Uitproberen</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <figure class="hero-photo reveal">
+          <img src="e43ae2f7-198a-4fd2-8b71-bce93dc1b58b.jpg" alt="Berglandschap als sfeervol openingsbeeld voor een pagina over nieuwe paden en AI" loading="eager" width="1200" height="900" />
+          <figcaption>Nieuwe paden ontdek je zelden in één sprong. Vaak begint het met kijken, proberen en samen vergelijken.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="waarom">
+      <div class="container intro-layout">
+        <div class="essay reveal">
+          <div class="section-header">
+            <h2>Waarom AI ons bezighoudt</h2>
+            <p>Wie dagelijks informatie verwerkt, keuzes maakt, verslagen schrijft, cijfers analyseert of mensen begeleidt, merkt snel dat AI tijd kan vrijmaken voor wat echt telt.</p>
+          </div>
+          <p>De meesten van ons nemen voortdurend beslissingen in werk en privé. AI helpt daarbij niet door voor ons te denken, maar door sneller informatie te vinden, ideeën te ordenen, documenten samen te vatten en nieuwe invalshoeken aan te reiken.</p>
+          <p>De grootste misvatting is dat AI één ding zou zijn. Net zoals je voor een graveltocht een andere fiets kiest dan voor een Alpenrit, bestaan er verschillende tools met elk hun eigen sterke punten.</p>
+          <p>De kunst zit dus niet in blind op één naam vertrouwen, maar in leren wanneer je welke assistent inzet. Dat maakt AI tegelijk boeiend en bijzonder bruikbaar.</p>
+
+          <details class="deep-dive">
+            <summary>Verder lezen: waarom dit juist nu relevant is</summary>
+            <div class="deep-dive-body">
+              <p>Voor veel mensen komt AI niet op het juiste moment omdat het zo spectaculair is, maar omdat de hoeveelheid informatie, mails, rapporten, richtlijnen en verwachtingen blijft toenemen. Daardoor stijgt de nood aan hulpmiddelen die sneller orde kunnen brengen.</p>
+              <p>Dat betekent niet dat je alles moet automatiseren. Integendeel: hoe groter de informatiestroom, hoe belangrijker menselijke inschatting wordt. AI is vooral nuttig wanneer ze het voorbereidende denkwerk lichter maakt.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="reveal" style="display:grid; gap: var(--space-5);">
+          <aside class="quote-panel">
+            <p>“Niet één AI, maar een hele ploeg.”</p>
+            <small>Zoals een koersfiets, mountainbike en tijdritfiets elk hun terrein hebben.</small>
+          </aside>
+
+          <figure class="photo-rail">
+            <img src="0e844929-b1ff-4ebf-97a5-e1527153e410.jpg" alt="Rustig natuurbeeld naast de inleidende tekst over AI en nieuwsgierigheid" loading="lazy" width="1200" height="900" />
+            <figcaption>Een nieuw hulpmiddel wordt pas interessant wanneer het in het echte leven bruikbaar aanvoelt.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="callout reveal">
+          <h3>Wat deze pagina wél en niet is</h3>
+          <ul>
+            <li><span class="dot">1</span><span>Wel: een laagdrempelige introductie, geschreven voor nieuwsgierige gebruikers en niet voor IT-specialisten.</span></li>
+            <li><span class="dot">2</span><span>Niet: een volledig overzicht of technische handleiding. Dit is een praktische opstap, geen eindpunt.</span></li>
+            <li><span class="dot">3</span><span>Wel: een uitnodiging om te experimenteren, ervaringen uit te wisselen en samen slimmer te worden.</span></li>
+          </ul>
+
+          <details class="deep-dive">
+            <summary>Verder lezen: hoe je deze pagina het best gebruikt</summary>
+            <div class="deep-dive-body">
+              <ul>
+                <li>Lees eerst de grote lijnen en onthoud vooral het principe dat niet elke tool hetzelfde doet.</li>
+                <li>Kies daarna één toepassing die voor jou herkenbaar is, bijvoorbeeld opzoekwerk, schrijven of werken met eigen documenten.</li>
+                <li>Probeer vervolgens slechts één hulpmiddel uit, zodat vergelijken later makkelijker wordt.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Niet één AI, maar een hele ploeg</h2>
+          <p>Veel namen worden op één hoop gegooid, maar elk model voelt anders aan en blinkt uit in andere taken. Hieronder staan de belangrijkste spelers in gewone mensentaal.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 4v10l-7 4-7-4V7l7-4z"/><path d="M8 9.5l4 2.5 4-2.5"/><path d="M12 12v5"/></svg>
+                </span>
+                ChatGPT
+              </div>
+              <span class="tool-badge">Allrounder</span>
+            </div>
+            <p>De veelzijdige ploegmaat voor brainstormen, schrijven, samenvatten, uitleggen en ideeën testen.</p>
+            <div class="meta"><span>chatgpt.com</span><span>Gratis + Plus</span></div>
+            <ul>
+              <li>Ideaal voor teksten, reisplanning en voorbereiding van meetings.</li>
+              <li>Handig wanneer je snel een eerste versie of frisse invalshoek nodig hebt.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: wanneer ChatGPT vooral sterk is</summary>
+              <div class="deep-dive-body">
+                <p>ChatGPT werkt bijzonder goed als denkpartner aan het begin van een opdracht. Je kunt ermee aftasten wat je eigenlijk wilt zeggen, welke structuur mogelijk is en welke versie het best past bij je publiek.</p>
+                <p>Het is minder bedoeld als pure bronnenmachine. Daarom gebruik je het best voor formuleren, structureren en verkennen, eerder dan voor feitelijke verificatie alleen.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
+                </span>
+                Perplexity
+              </div>
+              <span class="tool-badge">Onderzoeker</span>
+            </div>
+            <p>Meer researchassistent dan chatbot: zoekt info op, vat samen en toont meteen de bronnen.</p>
+            <div class="meta"><span>perplexity.ai</span><span>Gratis + Pro</span></div>
+            <ul>
+              <li>Sterk voor actuele info, feitencheck en voorbereidend opzoekwerk.</li>
+              <li>Zeer bruikbaar voor reizen, investeringen en bestuursvoorbereiding.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: waarom bronnen hier het verschil maken</summary>
+              <div class="deep-dive-body">
+                <p>Wanneer je wilt nagaan waar informatie vandaan komt, voelt Perplexity vaak transparanter. Je ziet sneller welke websites of publicaties het antwoord voeden.</p>
+                <p>Dat maakt het geschikt voor onderwerpen waarbij actualiteit of betrouwbaarheid belangrijk is, zoals regelgeving, reisinfo of vergelijking van producten en diensten.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v4h4"/><path d="M9 12h6M9 16h5"/></svg>
+                </span>
+                Claude
+              </div>
+              <span class="tool-badge">Denker</span>
+            </div>
+            <p>Rustige, genuanceerde stijl en sterk in lange teksten, complexe documenten en doordachte herwerking.</p>
+            <div class="meta"><span>claude.ai</span><span>Gratis + Pro</span></div>
+            <ul>
+              <li>Past goed bij rapportanalyse, beleidsdocumenten en strategische nota’s.</li>
+              <li>Fijn wanneer nuance en diepgang belangrijker zijn dan snelheid.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: wanneer nuance belangrijker is dan tempo</summary>
+              <div class="deep-dive-body">
+                <p>Bij langere teksten merk je vaak dat Claude rustig redeneert en minder gehaast formuleert. Dat kan aangenaam zijn wanneer je complexe argumentatie wilt uitzuiveren.</p>
+                <p>Het is een tool die goed past bij herwerking, reflectie en het scherper maken van beleidsmatige of inhoudelijk moeilijke stukken.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                </span>
+                Copilot
+              </div>
+              <span class="tool-badge">Microsoft</span>
+            </div>
+            <p>Voor wie vooral in Word, Excel, Outlook en Teams leeft, zit de meerwaarde in de integratie met Microsoft 365.</p>
+            <div class="meta"><span>copilot.microsoft.com</span><span>Gratis basis + Microsoft 365</span></div>
+            <ul>
+              <li>Nuttig voor verslagen, Excel-analyses, presentaties en e-mails.</li>
+              <li>Logische keuze als je werkdag al rond Microsoft draait.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: vooral interessant binnen je bestaande workflow</summary>
+              <div class="deep-dive-body">
+                <p>Copilot is vaak niet de meest opvallende tool op zichzelf, maar wel een logische keuze wanneer je je dag al in Microsoft 365 doorbrengt. Dan zit de winst in minder schakelen tussen platformen.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M8 12h8"/></svg>
+                </span>
+                Gemini
+              </div>
+              <span class="tool-badge">Google</span>
+            </div>
+            <p>Google’s antwoord, vooral interessant voor wie vooral in Gmail, Drive en Docs werkt.</p>
+            <div class="meta"><span>gemini.google.com</span><span>Gratis + AI Pro</span></div>
+            <ul>
+              <li>Voelt natuurlijk aan binnen de Google-werkomgeving.</li>
+              <li>Geschikt voor dagelijkse productiviteit en documentwerk.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: wanneer Google je thuishaven is</summary>
+              <div class="deep-dive-body">
+                <p>Wie al sterk op Gmail, Drive, Docs en Calendar steunt, zal Gemini vaak als een natuurlijke uitbreiding ervaren. Dat verlaagt de drempel om het in het dagelijkse werk te proberen.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-top">
+              <div class="tool-name">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H20v15.5A1.5 1.5 0 0 0 18.5 18H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                </span>
+                NotebookLM
+              </div>
+              <span class="tool-badge">Kennisbibliothecaris</span>
+            </div>
+            <p>Je laadt je eigen documenten op en stelt daar vragen over. Het systeem zoekt enkel in jouw eigen bronnen.</p>
+            <div class="meta"><span>notebooklm.google.com</span><span>Gratis + extra via AI Pro</span></div>
+            <ul>
+              <li>Bijzonder sterk voor richtlijnen, verslagen, beleidsnota’s en cursusmateriaal.</li>
+              <li>Ook indrukwekkend: automatisch een podcastgesprek laten genereren op basis van je documenten.</li>
+            </ul>
+            <details class="deep-dive">
+              <summary>Doordrillen: waarom dit anders voelt dan gewone chatbots</summary>
+              <div class="deep-dive-body">
+                <p>NotebookLM is vooral sterk wanneer je geen algemeen internetantwoord wilt, maar een analyse van je eigen documenten. Daardoor blijft het gesprek dichter bij jouw materiaal en context.</p>
+                <p>Dat is bijzonder nuttig voor interne nota’s, cursusteksten, procedures en verslagen die je niet telkens zelf van nul wilt herlezen.</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="situaties-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="situaties-title">Welke tool kies je wanneer?</h2>
+          <p>Je hoeft niet alles te onthouden. Zie dit als een eenvoudige wegwijzer voor de meest voorkomende situaties.</p>
+        </div>
+        <div class="comparison reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Situatie</th>
+                <th>Beste keuze</th>
+                <th>Waarom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Snel betrouwbare info zoeken</td>
+                <td><span class="pill">Perplexity</span></td>
+                <td>Bronnen staan meteen zichtbaar en maken feitencheck eenvoudiger.</td>
+              </tr>
+              <tr>
+                <td>Brainstormen of schrijven</td>
+                <td><span class="pill">ChatGPT</span></td>
+                <td>Snel ideeën genereren, formuleringen verfijnen en eerste versies maken.</td>
+              </tr>
+              <tr>
+                <td>Vooral Microsoft-gebruiker</td>
+                <td><span class="pill">Copilot</span></td>
+                <td>Naadloze aansluiting op Word, Excel, Outlook, Teams en presentaties.</td>
+              </tr>
+              <tr>
+                <td>Vooral Google-gebruiker</td>
+                <td><span class="pill">Gemini</span></td>
+                <td>Voelt als een natuurlijke uitbreiding van Gmail, Docs en Drive.</td>
+              </tr>
+              <tr>
+                <td>Werken met eigen documenten</td>
+                <td><span class="pill">NotebookLM</span></td>
+                <td>Analyseert enkel je eigen materiaal en blijft daardoor heel gericht.</td>
+              </tr>
+              <tr>
+                <td>Complexe teksten analyseren</td>
+                <td><span class="pill">Claude</span></td>
+                <td>Rustig, genuanceerd en sterk bij langere documenten en reflectie.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="split-band reveal">
+          <details class="deep-dive" open>
+            <summary>Doordrillen: een eenvoudige strategie om tools te combineren</summary>
+            <div class="deep-dive-body">
+              <p>In de praktijk gebruik je AI vaak niet als één losse toepassing. Een logische volgorde kan zijn: eerst informatie verzamelen, daarna structureren en tenslotte vertalen naar een document, mail of presentatie.</p>
+              <ul>
+                <li>Stap 1: gebruik Perplexity voor opzoekwerk en bronnen.</li>
+                <li>Stap 2: gebruik ChatGPT of Claude om de kern te ordenen en te herformuleren.</li>
+                <li>Stap 3: gebruik Copilot of Gemini binnen je werkomgeving om het eindproduct af te werken.</li>
+              </ul>
+            </div>
+          </details>
+
+          <figure class="photo-rail">
+            <img src="63baec82-2a1e-4296-9a00-918cc4841334.jpg" alt="Breed landschap als visuele pauze bij de vergelijking van AI-tools" loading="lazy" width="1200" height="900" />
+            <figcaption>Ook in AI is de kunst zelden één perfecte keuze maken, maar de juiste volgorde vinden.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="kiezen">
+      <div class="container choice-grid">
+        <div class="choice-panel reveal">
+          <h3>Mijn persoonlijke tip</h3>
+          <p>Als je vandaag opnieuw zou beginnen, dan volstaan twee tools voor het grootste deel van wat je professioneel en persoonlijk nodig hebt.</p>
+          <ul class="priority-list" aria-label="Aanbevolen startvolgorde">
+            <li><span>ChatGPT — denken, schrijven en brainstormen</span><span class="pill">1</span></li>
+            <li><span>Perplexity — opzoekwerk, actualiteit en bronnen</span><span class="pill">2</span></li>
+            <li><span>NotebookLM — extra sterk voor documentwerk</span><span class="pill">3</span></li>
+          </ul>
+
+          <details class="deep-dive">
+            <summary>Doordrillen: waarom klein beginnen vaak slimmer is</summary>
+            <div class="deep-dive-body">
+              <p>Wie met te veel tools tegelijk start, vergelijkt vooral verwarring. Met twee of drie vaste hulpmiddelen leer je sneller wat elk systeem goed doet en wanneer het minder geschikt is.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="choice-panel reveal">
+          <h3>De fietsenstalmetafoor</h3>
+          <p>Binnen WTC OHL weet iedereen dat één fiets niet alles kan. Voor een Alpenrit kies je iets anders dan voor gravel in Toscane of een kasseiklassieker.</p>
+          <p>Met AI werkt het net zo: soms gebruik je Perplexity om informatie te verzamelen, daarna ChatGPT om ze te verwerken, en vervolgens Copilot om er een presentatie van te maken.</p>
+
+          <details class="deep-dive">
+            <summary>Doordrillen: dezelfde logica in dagelijks werk</summary>
+            <div class="deep-dive-body">
+              <p>De echte winst zit niet enkel in de individuele tools, maar in de manier waarop je ze achter elkaar gebruikt. Net zoals materiaalkeuze in het fietsen een rit aangenamer maakt, kan gereedschapskeuze in kenniswerk veel frictie wegnemen.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container narrow reveal">
+        <div class="callout">
+          <h3>Waarom dit de moeite waard is</h3>
+          <p>AI vervangt geen expertise, geen ervaring en geen gezond verstand. Wat ze wel kan doen, is tijd vrijmaken voor denken, beslissen, creëren en met elkaar praten — precies de dingen die het verschil maken in werk, bestuur en vriendschap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="uitdaging">
+      <div class="container">
+        <div class="challenge-card reveal">
+          <div class="challenge-grid">
+            <div>
+              <div class="eyebrow">OHL AI-uitdaging</div>
+              <h2 class="tools-title">Voor de volgende rit</h2>
+              <p class="challenge-note">Net als fietsen leer je AI niet door er alleen over te lezen. Je leert het door op te stappen en iets uit te proberen.</p>
+            </div>
+            <div>
+              <ol>
+                <li><span class="step">1</span><span>Maak een gratis account aan op Perplexity.</span></li>
+                <li><span class="step">2</span><span>Stel een vraag die je professioneel of persoonlijk bezighoudt.</span></li>
+                <li><span class="step">3</span><span>Noteer één verrassend inzicht.</span></li>
+                <li><span class="step">4</span><span>Vertel erover tijdens de koffiestop.</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <details class="deep-dive" style="background: color-mix(in oklab, var(--color-surface) 86%, transparent);">
+            <summary>Doordrillen: hoe je van proberen naar echt gebruik gaat</summary>
+            <div class="deep-dive-body">
+              <p>Een eerste test is pas het begin. De echte stap vooruit komt wanneer je één terugkerende taak kiest waarvoor AI jou consequent tijd kan besparen, bijvoorbeeld een tekst samenvatten, een nota structureren of onderzoek starten.</p>
+              <p>Vanaf dan wordt AI geen curiositeit meer, maar een praktisch hulpmiddel dat een plaats krijgt in je manier van werken.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="closing-gallery reveal">
+          <figure>
+            <img src="1658df68-a9f5-49c3-a3c6-f23fceeedf7b.jpg" alt="Sfeerbeeld 1 als rustige visuele afsluiter" loading="lazy" width="1200" height="900" />
+            <figcaption>Nieuwsgierigheid begint vaak klein.</figcaption>
+          </figure>
+          <figure>
+            <img src="6a2ef5dd-8a4f-44dc-b169-46e7022f70ef.jpg" alt="Sfeerbeeld 2 als rustige visuele afsluiter" loading="lazy" width="1200" height="900" />
+            <figcaption>Experimenteren mag licht aanvoelen.</figcaption>
+          </figure>
+          <figure>
+            <img src="913cf808-496a-43b6-9c86-cbb217fab4ac.jpg" alt="Sfeerbeeld 3 als rustige visuele afsluiter" loading="lazy" width="1200" height="900" />
+            <figcaption>Samen leren werkt vaak het best.</figcaption>
+          </figure>
+          <figure>
+            <img src="ceedba45-f09d-4126-87ce-6c3c3389a956.jpg" alt="Sfeerbeeld 4 als rustige visuele afsluiter" loading="lazy" width="1200" height="900" />
+            <figcaption>Nieuwe paden worden duidelijker al doende.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Niet alleen samen fietsen, maar ook samen leren.</p>
+      <p>Ontworpen als een warme, leesbare one-pager die je meteen kunt delen met WTC OHL.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      function renderIcon(mode) {
+        toggle.innerHTML = mode === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label', mode === 'dark' ? 'Schakel naar lichte modus' : 'Schakel naar donkere modus');
+      }
+
+      root.setAttribute('data-theme', theme);
+      renderIcon(theme);
+
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon(theme);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.16 });
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
